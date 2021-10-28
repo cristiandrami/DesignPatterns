@@ -5,13 +5,13 @@ class Mi  : public NotaPrototype
 {
 public:
 	Mi(){
-		this.note="mi";
+		note="mi";
 	}
 	void print()
 	{
 		std::cout<<note;
 	}
-	Mi clone()
+	NotaPrototype* clone()
 	{
 		return this;
 	}

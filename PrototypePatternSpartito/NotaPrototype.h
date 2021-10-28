@@ -7,15 +7,15 @@ class NotaPrototype
 	public:
 		NotaPrototype(){
 		}
+		std::string note="";
 		
-		virtual NotaPrototype clone(){}
-		}
-		virtual void print(){}
+		virtual NotaPrototype* clone()=0;
+		virtual void print()=0;
 	
 	protected:
 		
 	private:
-		string note="";
+		
 		
 
 };

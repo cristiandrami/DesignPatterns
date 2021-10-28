@@ -11,7 +11,7 @@ public:
 		{
 			std::cout<<note;
 		}
-		Re clone()
+		NotaPrototype* clone()
 		{
 			return this;
 		}

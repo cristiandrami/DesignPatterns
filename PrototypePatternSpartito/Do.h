@@ -11,7 +11,7 @@ class Do: public NotaPrototype
 		{
 			std::cout<<note;
 		}
-		Do clone()
+		NotaPrototype* clone()
 		{
 			return this;
 		}
