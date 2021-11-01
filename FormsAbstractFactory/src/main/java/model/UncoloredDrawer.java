@@ -3,7 +3,14 @@ package model;
 import java.io.InputStream;
 
 public class UncoloredDrawer extends DrawerFactory{
-	public UncoloredDrawer() {
+	private static UncoloredDrawer drawer=null;
+	
+	private UncoloredDrawer(){}
+	
+	public static UncoloredDrawer getInstance() {
+		if(drawer==null)
+			drawer=new UncoloredDrawer();
+		return drawer;
 		
 	}
 	@Override

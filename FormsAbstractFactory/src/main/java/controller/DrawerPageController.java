@@ -35,9 +35,8 @@ public class DrawerPageController {
 
     @FXML
     void triangleButtonPressed(ActionEvent event) {
-    	
-      	if(drawer instanceof UncoloredDrawer)
-      	   centerBordePane.setStyle("-fx-background-color: #facc4c;");
+    	if(drawer instanceof ColoredDrawer)
+       	   centerBordePane.setStyle("-fx-background-color: #facc4c;");
     	
     	image.imageProperty().set(new Image(drawer.trianglePath()));
     	
@@ -47,6 +46,8 @@ public class DrawerPageController {
 
     @FXML
     void squareButtonPressed(ActionEvent event) {
+    	if(drawer instanceof ColoredDrawer)
+        	   centerBordePane.setStyle("-fx-background-color: #facc4c;");
     	
     	image.imageProperty().set(new Image(drawer.squarePath()));
 
@@ -54,7 +55,8 @@ public class DrawerPageController {
 
     @FXML
     void circleButtonPressed(ActionEvent event) {
-    
+    	if(drawer instanceof ColoredDrawer)
+        	   centerBordePane.setStyle("-fx-background-color: #facc4c;");
     	image.imageProperty().set(new Image(drawer.circlePath()));
     }
     

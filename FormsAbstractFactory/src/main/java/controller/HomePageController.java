@@ -24,7 +24,7 @@ public class HomePageController {
     @FXML
     void coloredButtonPressed(ActionEvent event) {
     	try {
-    		DrawerPageController.setDrawer(new ColoredDrawer());
+    		DrawerPageController.setDrawer(ColoredDrawer.getInstance());
 			SceneHandler.getInstance().switchToDrawerPage();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -36,7 +36,7 @@ public class HomePageController {
     @FXML
     void notColoredButtonPressed(ActionEvent event) {
     	try {
-    		DrawerPageController.setDrawer(new UncoloredDrawer());
+    		DrawerPageController.setDrawer(UncoloredDrawer.getInstance());
 			SceneHandler.getInstance().switchToDrawerPage();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -48,7 +48,7 @@ public class HomePageController {
     @FXML
     void dashedButtonPressed(ActionEvent event) {
     	try {
-    		DrawerPageController.setDrawer(new DashedDrawer());
+    		DrawerPageController.setDrawer(DashedDrawer.getInstance());
 			SceneHandler.getInstance().switchToDrawerPage();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

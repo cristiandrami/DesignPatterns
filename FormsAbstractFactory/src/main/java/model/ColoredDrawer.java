@@ -4,8 +4,15 @@ import java.io.InputStream;
 
 public class ColoredDrawer extends DrawerFactory{
 
-	public ColoredDrawer() {
+	private static ColoredDrawer drawer=null;
 	
+	private ColoredDrawer(){}
+	
+	public static ColoredDrawer getInstance() {
+		if(drawer==null)
+			drawer=new ColoredDrawer();
+		return drawer;
+		
 	}
 	@Override
 	public InputStream trianglePath() {
