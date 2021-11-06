@@ -13,8 +13,8 @@ class Do: public NotaPrototype
 		}
 		NotaPrototype* clone()
 		{
-			return this;
-		}
+			return new Do(*this);
+		}	
 	protected:
 };
 

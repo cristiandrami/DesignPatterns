@@ -13,6 +13,7 @@ int main()
 {
 
     FileBuilder* fileBuilder;
+    
     std::ifstream read;
 
     read.open("testText.txt");
@@ -33,6 +34,7 @@ int main()
         case 1:
         fileBuilder= new TxtBuilder();
         break;
+
         case 2:
         fileBuilder= new ReverseTxtBuilder();
         break;
@@ -44,18 +46,8 @@ int main()
 
     Director director(fileBuilder);
 
-    if(read.is_open()) 
-    {
-        while(read.good())
-        {
-            std::string line;
-            std::getline (read, line);
-            director.addLine(line+"\n");
-
-        }
-        
-    }
-    (*fileBuilder).createFile();
+    
+    director.parse();
 
     delete fileBuilder;
 }

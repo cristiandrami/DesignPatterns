@@ -34,6 +34,7 @@ int main(int argc, char** argv) {
 			score.push_back(notes.getNote(2)->clone());
 			break;
 			case 4: 
+			delete score[score.size()-1];
 			score.pop_back();
 			break;
 			default:
@@ -59,6 +60,11 @@ int main(int argc, char** argv) {
 		}
 
 		std::cin>>choose;
+	}
+
+	for(auto elem: score)
+	{
+		delete elem;
 	} 
 	
 }

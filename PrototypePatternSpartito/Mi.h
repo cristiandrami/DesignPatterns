@@ -13,7 +13,7 @@ public:
 	}
 	NotaPrototype* clone()
 	{
-		return this;
+		return new Mi(*this);
 	}
 protected:
 };

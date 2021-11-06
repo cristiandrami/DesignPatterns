@@ -31,7 +31,6 @@ class NotesGestor
 		
 		NotaPrototype* getNote(int index)
 		{
-			notes[0]->print();
 			return notes[index];
 		}
 	protected:
