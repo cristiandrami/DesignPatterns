@@ -14,9 +14,6 @@ int main()
 
     FileBuilder* fileBuilder;
     
-    std::ifstream read;
-
-    read.open("testText.txt");
     
     int choose=0;
     std::vector<int> possibleChooses={1,2};
